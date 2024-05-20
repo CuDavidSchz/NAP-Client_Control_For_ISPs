@@ -1,4 +1,6 @@
-# TC1030-Project-A01712135
+# NAP - Client control for ISPs
+
+
 Este repositorio esta destinado a el desarrollo del proyecto para la materia de POO
 
 I have the idea of ​​creating a system that can manage client connections with network access points.
