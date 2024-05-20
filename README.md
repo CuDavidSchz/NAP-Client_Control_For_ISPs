@@ -1,8 +1,6 @@
 # NAP - Client control for ISPs
 
 
-Este repositorio esta destinado a el desarrollo del proyecto para la materia de POO
-
 I have the idea of ​​creating a system that can manage client connections with network access points.
 With OOP approach I have the idea of ​​creating a system that can manage client connections with network access points. Inheritance can be applied with client types, NAP or connection type.
 
