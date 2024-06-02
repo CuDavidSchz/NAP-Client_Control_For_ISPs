@@ -6,28 +6,33 @@
 
 #ifndef Splice_h
 #define Splice_h
-#include "NetworkElement.h"
+#include "BackboneElement.h"
+#include "Nap.h"
 #include <iostream>
 #include <string>
+#include <vector>
 
-class Splice : public NetworkElement
+class Splice : public BackboneElement
 {
 private:
     int capacity;
-    std::string level;
+    std::vector<Nap*> naps;
     
 public:
-    //Constructors
+                        //Constructors
     Splice();
-    Splice(int, std::string, std::string, std::string, std::string, std::string, int, std::string);
+    Splice(std::string, std::string, std::string, std::string, std::string, int, std::vector<Nap*>);
     
-    //Getters
+                        //Getters
     int getCapacity();
-    std::string getLevel();
+    std::vector<Nap> getNaps();
     
-    //Setters
+                        //Setters
     void setCapacity(int);
     void setLevel(std::string);
+    
+                        //Adicionales
+    void addNap(Nap);
     
 };
 

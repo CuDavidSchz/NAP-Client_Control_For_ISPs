@@ -7,11 +7,12 @@
 
 #ifndef Rack_h
 #define Rack_h
-#include "NetworkElement.h"
+#include "BackboneElement.h"
+#include "Splice.h"
 #include <iostream>
 #include <string>
 
-class Rack : public NetworkElement
+class Rack : public ackboneElement
 {
 private:
     int rackUnits;
