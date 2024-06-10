@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Client.h"
 #include <string>
+#include <vector>
 
 class Company : public Client {
 private:
@@ -28,6 +29,8 @@ public:
     void setCompanyName(std::string);
     void setTechsupportad(bool);
 
+    // Additionals
+    void showInfo() override;
 };
 
 #endif /* Company_h */

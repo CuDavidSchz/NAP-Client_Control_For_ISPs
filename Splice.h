@@ -7,32 +7,50 @@
 #ifndef Splice_h
 #define Splice_h
 #include "BackboneElement.h"
-#include "Nap.h"
+#include "Nap.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm> 
+
+
+using namespace std;
 
 class Splice : public BackboneElement
 {
 private:
-    int capacity;
-    std::vector<Nap*> naps;
+    
+    vector<Nap*> naps;
+    int maxClients;
+    int maxClientsR;
     
 public:
+//--------------------------------------------------------------------------------
                         //Constructors
     Splice();
-    Splice(std::string, std::string, std::string, std::string, std::string, int, std::vector<Nap*>);
+    Splice(string, string, string, string, string, int, vector<Nap*>, int, int);
     
+    
+//--------------------------------------------------------------------------------
                         //Getters
-    int getCapacity();
-    std::vector<Nap> getNaps();
     
+    int getMaxClients();
+    int getMaxClientsR();
+    vector<Nap*> getNaps();
+    
+//--------------------------------------------------------------------------------
                         //Setters
-    void setCapacity(int);
-    void setLevel(std::string);
     
+    void setMaxClients(int);
+
+//--------------------------------------------------------------------------------
+
                         //Adicionales
-    void addNap(Nap);
+    void addNap(vector<Nap*>);
+    vector<Nap*> addNap(int);
+
+    void showInfo() override;
+    int getClientCount() const override;
     
 };
 

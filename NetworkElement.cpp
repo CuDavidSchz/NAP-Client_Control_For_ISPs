@@ -16,7 +16,7 @@
 NetworkElement::NetworkElement()
 {
     
-    name = "Set Name";
+    ID = "Set ID";
     status = "Not set";
     location = "Set Location";
     manufacturer = "Set manufacturer";
@@ -25,9 +25,9 @@ NetworkElement::NetworkElement()
 }
                 
                 //Parameterized
-NetworkElement::NetworkElement(std::string _name, std::string _status, std::string _location, std::string _manufacturer, std::string _model)
+NetworkElement::NetworkElement(std::string _ID, std::string _status, std::string _location, std::string _manufacturer, std::string _model)
 {
-    name = _name;
+    ID = _ID;
     status = _status;
     location = _location;
     manufacturer = _manufacturer;
@@ -37,34 +37,34 @@ NetworkElement::NetworkElement(std::string _name, std::string _status, std::stri
                                 //Getters
 
 
-std::string NetworkElement::getName() const
+std::string NetworkElement::getID() const
 {
-    return name;
+    return this->ID;
 }
 std::string NetworkElement::getStatus() const
 {
-    return status;
+    return this->status;
 }
 std::string NetworkElement::getLocation() const
 {
-    return location;
+    return this->location;
 }
 std::string NetworkElement::getManufacturer() const
 {
-    return manufacturer;
+    return this->manufacturer;
 }
 std::string NetworkElement::getModel() const
 {
-    return model;
+    return this->model;
 }
 
 
 
                             //Setters
         
-void NetworkElement::setName(std::string _name)
+void NetworkElement::setID(std::string _ID)
 {
-    this-> name = _name;
+    this-> ID = _ID;
 }
 void NetworkElement::setStatus(std::string _status)
 {

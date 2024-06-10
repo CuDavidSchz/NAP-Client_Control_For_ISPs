@@ -13,40 +13,37 @@
 class NetworkElement{
 protected:
     
-    std::string name;
+    std::string ID;
     std::string status;
     std::string location;
     std::string manufacturer;
     std::string model;
 
 public:
-                            //Constructors
+                            // Constructors
     NetworkElement();
     NetworkElement(std::string, std::string, std::string, std::string, std::string);
     
-                            //Getters
+                            // Getters
     
-    virtual int getID() = 0; //Reservation for subclasses
-    
-    std::string getName() const;
+    std::string getID() const;
     std::string getStatus() const;
     std::string getLocation() const;
     std::string getManufacturer() const;
     std::string getModel() const;
 
     
-                            //Setters
+                            // Setters
     
-    virtual void setID(int) = 0; //Reservation for subclasses
-    
-    void setName(std::string);
+    void setID(std::string);
     void setStatus(std::string);
     void setLocation(std::string);
     void setManufacturer(std::string);
     void setModel(std::string);
     
-                            //Aditionals
-    virtual void showInfo() = 0;
+                            // Aditionals
+    virtual void showInfo() = 0; //Reservation for subclasses
+    virtual int getClientCount() const = 0;
     
 };
 

@@ -11,16 +11,19 @@
 #include "Splice.h"
 #include <iostream>
 #include <string>
+using namespace std;
 
-class Rack : public ackboneElement
+class Rack : public BackboneElement
 {
 private:
-    int rackUnits;
+    int oltTechnology;
+    vector<Splice*> splices;
+    int numFibersR; // Fibras restantes para uso
     
 public:
     //Constructors
     Rack();
-    Rack(int, std::string, std::string, std::string, std::string, std::string, int);
+    Rack(string, string, string, string, string, string, int);
     
     //Getters
     int getRackUnits();

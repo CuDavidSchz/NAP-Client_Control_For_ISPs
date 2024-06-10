@@ -7,27 +7,33 @@
 #include "Domestic.h"
 #include <iostream>
 #include <string>
+#include <vector>
+using namespace std;
 
-//Constructors
+// Constructors
 
-Domestic::Domestic()
+        //Default
+Domestic::Domestic() : Client() {}
+
+        //Parametrizado
+Domestic::Domestic(int _idc, std::string _serviceOwner, std::string _address, int _phoneNumber, float _fee, bool _status, int _bandwidth) :
+
+    Client(_idc, _serviceOwner, _address, _phoneNumber, _fee, _status, _bandwidth)
+{}
+
+// Additionals
+
+void Domestic::showInfo()
 {
-    idc = 0;
-    serviceOwner = "Set Name";
-    address = "Set Address";
-    phoneNumber = 0;
-    fee = 0.0;
-    status = false;
-    bandwidth = 10;
-}
+    cout << endl;
+    cout << "--------------------------" << endl;
+    cout << "Información del cliente: " << serviceOwner << endl;
+    cout << "Estatus: " << status << endl;
+    cout << "Ubicación: " << address << endl;
+    cout << "Número de teléfono: " << phoneNumber << endl;
+    cout << "Tarifa: " << fee << endl;
+    cout << "Ancho de banda: " << bandwidth << endl;
+    cout << "--------------------------" << endl;
+    cout << endl;
 
-Domestic::Domestic(int _idc, std::string _serviceOwner, std::string _address, int _phoneNumber, float _fee, bool _status, int _bandwidth)
-{
-    idc = _idc;
-    serviceOwner = _serviceOwner;
-    address = _address;
-    phoneNumber = _phoneNumber;
-    fee = _fee;
-    status = _status;
-    bandwidth = _bandwidth;
 }

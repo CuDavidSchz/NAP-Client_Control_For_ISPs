@@ -43,6 +43,9 @@ public:
     void setFee(float);
     void setStatus(bool);
     void setBandwidth(int);
+    
+    // Additionals
+    virtual void showInfo() = 0;
 };
 
 

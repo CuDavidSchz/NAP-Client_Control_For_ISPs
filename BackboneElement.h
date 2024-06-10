@@ -16,21 +16,22 @@
 class BackboneElement : public NetworkElement
 {
 protected:
-    int idBE;
     int numberFibers;
     
 public:
                             //Constructors
     BackboneElement();
-    BackboneElement(std::string, std::string, std::string, std::string, std::string, int, int);
+    BackboneElement(std::string, std::string, std::string, std::string, std::string, int);
     
                             //Getters
     int getNumberFibers();
-    int getID() override;
     
                             //Settters
     void setNumberFibers(int);
-    void setID(int) override;
+    
+                            // Additionals
+    
+
 };
 
 #endif /* BackboneElement_h */

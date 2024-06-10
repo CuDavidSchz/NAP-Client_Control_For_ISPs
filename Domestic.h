@@ -12,8 +12,12 @@
 
 class Domestic : public Client {
 public:
+    //Constructors
     Domestic();
     Domestic(int, std::string, std::string, int, float, bool, int);
+    
+    // Additionals
+    void showInfo() override;
 };
 
 #endif /* Domestic_h */
